@@ -4,8 +4,9 @@ def estimator(data):
   output={"data": {},"impact": {},"severeImpact":{}}
   output['impact']['currentlyInfected']=reportedCases * 10
   output['severeImpact']['currentlyInfected']=reportedCases * 50
-  if data['days']:
-      factor=round(data['days']/3,0)
+  days=28
+  if days:
+      factor=round(days/3,0)
       estimate_impact=output['impact']['currentlyInfected'] *pow(2,factor)
       output['impact']['infectionsByRequestedTime']=estimate_impact
       estimate_severeimpact=output['severeImpact']['currentlyInfected']* pow(2,factor)
