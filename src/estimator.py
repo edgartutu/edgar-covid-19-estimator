@@ -35,7 +35,12 @@ def estimator(data):
       estimated_money1=dollarsInFlight_2*0.85*5*30
       output['impact']['dollarsInFlight']=int(estimated_money)
       output['severeImpact']['dollarsInFlight']=int(estimated_money1)
-      return output
+      final_output={"data":{}, "estimate":{}}
+      final_output['data']=data
+      final_output['estimate']["impact"]=output["impact"]
+      final_output['estimate']["severeImpact"]=output["severeImpact"]
+      return final_output
+      
 
   elif data['weeks']:
       days=data['weeks']*7
