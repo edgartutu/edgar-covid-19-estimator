@@ -34,10 +34,10 @@ def estimator(data):
   # estimated_money1=dollarsInFlight_2*0.85*5*30
   # output['impact']['dollarsInFlight']=estimated_money
   # output['severeImpact']['dollarsInFlight']=estimated_money1
-  # final_output={"data":{}, "estimate":{}}
-  # final_output['data']=data
-  # final_output['estimate']["impact"]=output["impact"]
-  # final_output['estimate']["severeImpact"]=output["severeImpact"]
+  final_output={"data":{}, "estimate":{}}
+  final_output['data']=data
+  final_output['estimate']["impact"]=output["impact"]
+  final_output['estimate']["severeImpact"]=output["severeImpact"]
   return output
       
 
