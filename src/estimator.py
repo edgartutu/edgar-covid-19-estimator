@@ -1,12 +1,8 @@
-
 from flask_restful import Resource, Api
 from flask import flash, redirect, render_template, request, url_for,make_response
 
 
-
-
-
-class Covid19ImpactEstimator(Resource):
+class estimator(Resource):
     def post(self):
         data=request.get_json()
         reportedCases=data['reportedCases']
@@ -125,3 +121,7 @@ class Covid19ImpactEstimator(Resource):
         
         
         
+
+      
+
+  
